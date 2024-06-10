@@ -21,12 +21,8 @@ This repository contains the code for the Skill Craft Technology landing page. T
 - JavaScript
 
  Getting Started
-
-1. Clone the repository:
-   sh
-   git clone https://github.com/yourusername/skillcraft-landing-page.git
    
-2. Open `index.html` in a web browser.
+1. Open `landingpage.html` in a web browser.
 
  Code Overview
 
