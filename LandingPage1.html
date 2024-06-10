@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Craft Technology</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background-color: #fceff5;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #b76e79;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #8c4751;
+      transform: scale(1.1);
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    #home {
+      background-color: #ffffff;
+      animation: fadeIn 1s ease-in;
+    }
+
+    #about {
+      background-color: #fce2e5;
+    }
+
+    #services {
+      background-color: #f9ccd1;
+    }
+
+    #contact {
+      background-color: #f6b1b9;
+    }
+
+    .navbar-scroll {
+      background-color: #a35660;
+    }
+
+    img.logo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    img.logo:hover {
+      transform: scale(1.05);
+    }
+
+    h1, h2 {
+      margin: 20px 0;
+      color: #333;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #555;
+      font-size: 1.25em; /* Increased font size */
+    }
+
+    p.bold {
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home section -->
+  <div id="home" class="section">
+    <img src="D:\LandingPage\SKILLCRAFT.jpg.jpg" alt="Skill Craft Logo" class="logo">
+    <h1>Welcome to Skill Craft Technology</h1>
+  </div>
+
+  <!-- About section -->
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <!-- Description about the company -->
+    <p class="bold">We provide tech solutions.</p>
+    <p class="bold">Crafting Success through Technology</p>
+    <p class="bold">IT Services and IT Consulting</p>
+  </div>
+
+  <!-- Our Services section -->
+  <div id="services" class="section">
+    <h2>Our Services</h2>
+    <!-- Description about the services offered -->
+    <p class="bold">We offer tech support and consulting.</p>
+  </div>
+
+  <!-- Contact Us section -->
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <!-- Prompt to reach out -->
+    <p class="bold">Feel free to reach out to us.</p>
+    <p>For more information, visit our <a href="https://www.linkedin.com/company/skillcraft-technology/about/" target="_blank">LinkedIn page</a>.</p>
+  </div>
+
+  <!-- JavaScript for navbar functionality -->
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scroll');
+      } else {
+        navbar.classList.remove('navbar-scroll');
+      }
+    });
+
+    var navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        item.classList.add('navbar-hover');
+      });
+      item.addEventListener('mouseleave', function() {
+        item.classList.remove('navbar-hover');
+      });
+    });
+  </script>
+</body>
+</html>
